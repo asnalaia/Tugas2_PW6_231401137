@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); /* Gradasi warna pink */
+    transition: all 0.5s ease-in-out;
+}
+
+.header {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 0;
+    margin-top: 0;
+    color: #e91e63; /* Warna pink */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Efek bayangan pada teks */
+}
+
+.heading-line {
+    width: 800px;
+    margin: 5px auto 50px auto;
+    border: 0;
+    border-top: 2px solid #e91e63; /* Garis atas pink */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.form-container {
+    width: 760px;
+    padding: 20px;
+    background-color: #ffffff; /* Latar belakang putih */
+    border: 2px solid #e91e63; /* Garis kotak pink */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih jelas */
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out;
+}
+
+.result-container {
+    display: none;
+    max-width: 100%;
+    padding: 20px 50px;
+    background-color: #f8f0f4; /* Latar belakang pink muda untuk hasil */
+    border: 2px solid #e91e63; /* Garis kotak pink */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk kedalaman */
+    border-radius: 10px;
+    margin-right: 1px;
+    margin-top: 30px;
+    text-align: center;
+    animation: slideInRight 0.5s ease; /* Menambahkan animasi saat muncul */
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #e91e63; /* Warna label pink */
+}
+
+input[type="text"],
+input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fcf0f4; /* Latar belakang input pink muda */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    background-color: #fff0f6; /* Latar belakang saat fokus */
+    border-color: #e91e63; /* Border saat fokus */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e91e63; /* Warna tombol pink */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px auto 0 auto;
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button:hover {
+    background-color: #c2185b; /* Warna tombol saat hover */
+    transform: translateY(-2px);
+}
+
+.result-container img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10px;
+}
+
+.result-container p {
+    text-align: center;
+    margin: 5px;
+    padding: 0;
+    color: #e91e63; /* Warna teks hasil pink */
+}
+
+.form-container:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"],
+input[type="file"] {
+    transition: border 0.5s, background-color 0.5s;
+}
+
+label:hover {
+    color: #c2185b; /* Warna label saat hover pink tua */
+    text-decoration: underline;
+}
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    animation: fadeIn 0.5s ease;
+    width: 300px; /* Atur lebar box sesuai kebutuhan */
+}
+
+.notification p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #e91e63;
+    font-weight: bold;
+}
+
+.notification button {
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.notification button:hover {
+    background-color: #c2185b;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
